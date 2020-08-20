@@ -133,4 +133,17 @@ $(document).ready(function () {
       offset: '-25%',
     }
   );
+
+  /* Mobile Navigation */
+  $('.js--nav-icon').click(() => {
+    let nav = $('.js--main-nav');
+    // let icon = $('.js--nav-icon ion-icon');
+
+    nav.slideToggle(200);
+    // if(icon.hasClass('menu-outline')){
+    //   icon.addClass() //icons we're using dont have class names;
+    // } else {
+
+    // }
+  });
 });
