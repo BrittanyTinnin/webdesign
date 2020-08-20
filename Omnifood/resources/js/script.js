@@ -80,4 +80,57 @@ $(document).ready(function () {
         }
       }
     });
+
+  /* Animations on scroll */
+  $('.js--wp-1').waypoint(
+    function (direction) {
+      $('.js--wp-1').addClass('animate__animated animate__fadeIn');
+    },
+    {
+      offset: '50%',
+    }
+  );
+
+  $('.js--wp-2').waypoint(
+    function (direction) {
+      $('.js--wp-2').addClass('animate__animated animate__fadeInUpBig');
+    },
+    {
+      offset: '50%',
+    }
+  );
+
+  $('.js--wp-3').waypoint(
+    function (direction) {
+      $('.js--wp-3').addClass('animate__animated animate__fadeIn');
+    },
+    {
+      offset: '50%',
+    }
+  );
+
+  $('.js--wp-4').waypoint(
+    function (direction) {
+      $('.js--wp-4').addClass('animate__animated animate__pulse');
+    },
+    {
+      offset: '50%',
+    }
+  );
+
+  //When you reach THE HEADER
+  $('.js--header').waypoint(
+    (direction) => {
+      if (direction === 'up') {
+        // remove the animation classes from all waypoints (1 - 4)
+        $('.js--wp-1').removeClass('animate__animated animate__fadeIn');
+        $('.js--wp-2').removeClass('animate__animated animate__fadeInUpBig');
+        $('.js--wp-3').removeClass('animate__animated animate__fadeIn');
+        $('.js--wp-4').removeClass('animate__animated animate__pulse');
+      }
+    },
+    {
+      offset: '-25%',
+    }
+  );
 });
