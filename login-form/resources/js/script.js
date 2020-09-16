@@ -1,39 +1,25 @@
-const axios = require('axios');
+// const { default: Axios } = require('axios');
 
-// Send a POST request
-// axios({
-//   method: 'post',
-//   url: '/user/12345',
-//   data: {
-//     firstName: 'Fred',
-//     lastName: 'Flintstone'
-//   }
-// });
-// GET request for remote image in node.js
-// axios({
-//   method: 'get',
-//   url: 'http://bit.ly/2mTM3nY',
-//   responseType: 'stream'
-// })
-//   .then(function (response) {
-//     response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
-//   });
 const baseURL = 'http://localhost:8080';
 
-// axios({
-//   method: 'post',
-//   url: `${baseURL}/user/new`,
-//   data: {
-//     name: this.name.value,
-//     gender: '',
-//     country: '',
-//     introduction: '',
-//     password: '',
-//     confirmPassword: '',
-//   },
-// }).then((response) => {
+const registerBtn = document.getElementById('register');
+const getUser = document.getElementById('user');
+
+// async function getUserData() {
+//   console.log('inside getUserData');
+//   const response = await axios.get(`${baseURL}/users`);
 //   console.log(response);
-// });
+// }
+const getUserData = () => {
+  axios
+    .get(`${baseURL}/users`)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
 
 // private int id;
 // private String name;
@@ -43,29 +29,28 @@ const baseURL = 'http://localhost:8080';
 // private String password;
 // private String confirmPassword;
 
-$(document).ready(function () {
-  $('#register-user').submit(function (event) {
-    //stop submit the form, we will post it manually.
-    event.preventDefault();
+getUser.addEventListener('click', getUserData);
 
-    fire_ajax_submit();
-  });
-});
+// *************************
+// CREATE USER
+// *************************
 
-function fire_ajax_submit() {
-  $.ajax({
-    type: 'POST',
-    contentType: 'application/json',
-    url: `${baseURL}/user/new`,
-    data: JSON.stringify(search),
-    dataType: 'json',
-    cache: false,
-    timeout: 600000,
-    success: function (data) {
-      console.log('Data: ' + data);
-    },
-    error: function (e) {
-      console.log('Error: ' + e);
-    },
-  });
-}
+const registerUser = () => {
+  console.log('inside registerUser');
+  axios
+    .post(
+      `${baseURL}/user/new`,
+      {
+        name: name,
+      },
+      console.log(name)
+    )
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};
+
+registerBtn.addEventListener('click', registerUser);

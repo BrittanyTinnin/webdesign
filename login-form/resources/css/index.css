@@ -1,0 +1,12 @@
+body {
+  font-family: 'Syne', sans-serif;
+}
+
+.display-user h3,
+h5 {
+  font-weight: 700;
+}
+
+.form-display h3 {
+  font-weight: 700;
+}

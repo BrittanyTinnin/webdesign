@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -17,7 +18,7 @@
     <div class="container">
       <div class="row justify-content-center mt-5">
         <div class="col-lg-4">
-          <div class="mt-3">
+          <div class="mt-3 form-display">
             <form
               id="register-user"
               class="text-center my-5 border border-warning rounded-lg shadow p-3 mb-5 bg-white rounded d-lg"
@@ -100,8 +101,63 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-primary">Register</button>
+              <button type="button" id="register" class="btn btn-primary">
+                Register
+              </button>
             </form>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="mt-5">
+            <div class="card display-user">
+              <h3 class="card-title mx-auto pt-4 text-center text-primary">User Profile</h3>
+              <button id="user" class="btn btn-outline-primary mx-3 mb-4">Refresh</button>
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item">
+                  <h5 class="card-title">Name</h5>
+                  <p class="card-text">Marcus Jones</p>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="card-title">Gender</h5>
+                  <p class="card-text">male</p>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="card-title">Country</h5>
+                  <p class="card-text">USA</p>
+                </li>
+                <li class="list-group-item">
+                  <h5 class="card-title">Introduction</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatem aliquam placeat distinctio temporibus magnam fugit exercitationem quisquam eum aut?</p>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-4">
+          <div class="mt-5">
+            <div class="card display-user p-3">
+              <div class="input-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+                <button type="button" class="btn btn-outline-primary">Left</button>
+                <button type="button" class="btn btn-outline-primary">Middle</button>
+                <button type="button" class="btn btn-outline-primary">Right</button>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -123,5 +179,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/resources/js/script.js"></script>
   </body>
 </html>
