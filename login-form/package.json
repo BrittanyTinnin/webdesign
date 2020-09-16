@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "axios": "^0.20.0",
-    "jquery": "^3.5.1"
+    "axios": "^0.20.0"
   }
 }
