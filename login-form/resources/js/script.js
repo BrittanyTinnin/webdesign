@@ -5,6 +5,11 @@ const baseURL = 'http://localhost:8080';
 const registerBtn = document.getElementById('register');
 const getUser = document.getElementById('user');
 
+const username = document.getElementById('username');
+let body = {
+  username: username
+}
+
 // async function getUserData() {
 //   console.log('inside getUserData');
 //   const response = await axios.get(`${baseURL}/users`);
@@ -41,9 +46,9 @@ const registerUser = () => {
     .post(
       `${baseURL}/user/new`,
       {
-        name: name,
+        name: username.value,
       },
-      console.log(name)
+      console.log(username.value)
     )
     .then(function (response) {
       console.log(response);
@@ -53,4 +58,20 @@ const registerUser = () => {
     });
 };
 
-registerBtn.addEventListener('click', registerUser);
+registerBtn.addEventListener('click', function(){
+  console.log('inside registerUser');
+  axios
+    .post(
+      `${baseURL}/user/new`,
+      {
+        name: username.value,
+      },
+      console.log(username.value)
+    )
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+});
