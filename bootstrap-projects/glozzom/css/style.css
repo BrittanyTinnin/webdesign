@@ -1,0 +1,35 @@
+.navbar .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.navbar .nav-item.active {
+    border-left: #444 3px solid;
+}
+
+.carousel-item {
+    height: 450px;
+}
+
+.carousel-image-1 {
+    background: url('../images/image1.jpg');
+    background-size: cover;
+}
+
+.carousel-image-2 {
+    background: url('../images/image2.jpg');
+    background-size: cover;
+}
+
+.carousel-image-3 {
+    background: url('../images/image3.jpg');
+    background-size: cover;
+}
+
+#home-heading {
+    position: relative;
+    min-height: 200px;
+    background: url('/images/lights.jpg');
+}
