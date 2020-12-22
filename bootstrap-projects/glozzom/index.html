@@ -15,7 +15,18 @@
 
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/b9587fe795.js" crossorigin="anonymous"></script>
+
+    <!-- Lightbox for Bootstrap (https://ashleydw.github.io/lightbox/)-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+      integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/b9587fe795.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Glozzom</title>
   </head>
 
@@ -152,12 +163,18 @@
           <div class="col-md-4 mb-4 text-center">
             <i class="fas fa-cloud fa-3x mb-2"></i>
             <h3>Sending Data</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus, amet.</p>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, amet.
+            </p>
           </div>
           <div class="col-md-4 mb-4 text-center">
             <i class="fas fa-cart-plus fa-3x mb-2"></i>
             <h3>Making Money</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptates.</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur, voluptates.
+            </p>
           </div>
         </div>
       </div>
@@ -168,10 +185,181 @@
       <div class="dark-overlay">
         <div class="row">
           <div class="col">
-            <div class="con">
+            <div class="container text-center text-white pt-5">
               <h1>Are You Ready To Get Started?</h1>
-              <p class="d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, iste. Facere autem saepe blanditiis esse.</p>
+              <p class="d-none d-md-block">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
+                iste. Facere autem saepe blanditiis esse.
+              </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section id="info" class="py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 align-self-center">
+            <h3>Lorem Ipsum</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Molestias tempora impedit velit quas culpa, temporibus a ducimus
+              possimus consectetur illum.
+            </p>
+            <a href="about.html" class="btn btn-outline-danger btn-lg"
+              >Learn More</a
+            >
+          </div>
+          <div class="col-md-6">
+            <img src="images/laptop.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO PLAY -->
+    <section id="video-play">
+      <div class="dark-overlay">
+        <div class="row">
+          <div class="col">
+            <div class="container p-5">
+              <!-- TRIGGER FOR MODAL VIDEO -->
+              <a
+                href="#"
+                class="video text-center"
+                data-bs-video="https://www.youtube.com/embed/7PBYGu4Az8s"
+                data-bs-toggle="modal"
+                data-bs-target="#videoModal"
+                ><i class="fas fa-play fa-3x"></i
+              ></a>
+              <h1>See What We Do</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO MODAL -->
+    <div class="modal fade" id="videoModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+            <iframe
+              src=""
+              title=""
+              height="350"
+              width="100%"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTO GALLERY -->
+    <section id="gallery" class="py-5">
+      <div class="container">
+        <h1 class="text-center">Photo Gallery</h1>
+        <p class="text-center">Check out our photos</p>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/561x561"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="561"
+              data-width="561"
+            >
+              <img
+                src="https://source.unsplash.com/random/561x561"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/560x560"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="560"
+              data-width="560"
+            >
+              <img
+                src="https://source.unsplash.com/random/560x560"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/562x562"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="562"
+              data-width="562"
+            >
+              <img
+                src="https://source.unsplash.com/random/562x562"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/560x560"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="560"
+              data-width="560"
+            >
+              <img
+                src="https://source.unsplash.com/random/560x560"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/565x565"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="565"
+              data-width="565"
+            >
+              <img
+                src="https://source.unsplash.com/random/565x565"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a
+              href="https://source.unsplash.com/random/558x558"
+              data-toggle="lightbox"
+              data-gallery="img-gallery"
+              data-height="558"
+              data-width="558"
+            >
+              <img
+                src="https://source.unsplash.com/random/558x558"
+                alt=""
+                class="img-fluid"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -194,9 +382,30 @@
       integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+      integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+      crossorigin="anonymous"
+    ></script>
     <script>
       //Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+
+      // video play
+      $(function () {
+        // Auto play modal video
+        $(".video").click(function () {
+          var theModal = $(this).data("bs-target"),
+            videoSRC = $(this).attr("data-bs-video"),
+            videoSRCauto =
+              videoSRC +
+              "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + " iframe").attr("src", videoSRCauto);
+          $(theModal + " button.close").click(function () {
+            $(theModal + " iframe").attr("src", videoSRC);
+          });
+        });
+      });
     </script>
   </body>
 </html>
