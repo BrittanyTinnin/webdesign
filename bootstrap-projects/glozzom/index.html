@@ -286,14 +286,14 @@
           </div>
           <div class="col-md-4">
             <a
-              href="https://source.unsplash.com/random/560x560"
+              href="https://source.unsplash.com/random/559x559"
               data-toggle="lightbox"
               data-gallery="img-gallery"
-              data-height="560"
-              data-width="560"
+              data-height="559"
+              data-width="559"
             >
               <img
-                src="https://source.unsplash.com/random/560x560"
+                src="https://source.unsplash.com/random/559x559"
                 alt=""
                 class="img-fluid"
               />
@@ -365,6 +365,38 @@
       </div>
     </section>
 
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="text-center p-5 bg-dark text-white">
+      <div class="container">
+        <h1>Sign Up For Our Newsletter</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ipsum
+          pariatur veritatis consectetur quae suscipit sunt quaerat vel labore
+          sapiente.
+        </p>
+        <form class="row row-cols-auto g-2 justify-content-center">
+          <div class="col">
+            <input type="text" class="form-control-lg mb-2" placeholder="Enter Name"/>
+          </div>
+          <div class="col">
+            <input type="text" class="form-control-lg mb-2" placeholder="Enter Email"/>
+          </div>
+            <button class="btn btn-primary btn-lg ms-1 mb-2">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer" class="text-center p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>Copyright &copy; <span id="year"></span> Glozzom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Jquery (replace this later and use vanilla javascript)-->
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -405,6 +437,12 @@
             $(theModal + " iframe").attr("src", videoSRC);
           });
         });
+      });
+
+      //Lightbox
+      $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
       });
     </script>
   </body>
