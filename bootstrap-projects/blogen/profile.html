@@ -17,8 +17,125 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-  <!-- START HERE -->
-  <h1>profile</h1>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Blogen</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarLinks">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item mx-1">
+            <a href="index.html" class="nav-link">Dashboard</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a href="posts.html" class="nav-link">Posts</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a href="categories.html" class="nav-link">Categories</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a href="users.html" class="nav-link">Users</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-user"></i> Welcome Brittany
+            </a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item">
+                <i class="fas fa-user-circle"></i> Profile
+              </a>
+
+              <a href="settings.html" class="dropdown-item">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-user-times"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="navbar navbar-dark bg-secondary">
+    <div class="container">
+      <span class="navbar-brand mb-0 fs-1 p-2"><i class="fas fa-user"></i> Edit Profile</span>
+    </div>
+  </header>
+
+  <!-- ACTIONS -->
+  <section id="actions" class="py-4 bg-light mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <a href="index.html" class="btn btn-outline-primary w-100" type="button">
+            <i class="fas fa-arrow-left"></i>
+            Back To
+            Dashboard
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="index.html" class="btn btn-success text-light w-100" type="button">
+            <i class="fas fa-lock"></i> Change Password
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="index.html" class="btn btn-danger text-light w-100" type="button">
+            <i class="fas fa-trash"></i> Delete Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-9">
+          <div class="card">
+            <div class="card-header">
+              <h4>Edit Profile</h4>
+            </div>
+            <div class="card-body">
+              <form action="">
+                <div class="mb-3">
+                  <label for="profileName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="profileName" placeholder="Brittany Tinnin">
+                </div>
+                <div class="mb-3">
+                  <label for="profileEmail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="profileEmail" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="profileBio" class="form-label">Bio</label>
+                  <textarea name="editor1" class="form-control" id="profileBio" rows="3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit iure nihil asperiores id vitae voluptatum error numquam dolores vel. Minus est ratione aliquam dolore similique sapiente nihil expedita labore dolor quod sit consequatur, nisi iste iusto eaque eligendi odit tempore modi impedit? Magni quam fuga, totam non tempore velit iste modi necessitatibus, esse perspiciatis veritatis expedita! Explicabo, ipsum, aliquid quia harum sunt aspernatur facere tempore, quaerat velit laboriosam vel voluptates architecto nobis voluptatibus dignissimos odit! Magni sapiente repellat vitae deleniti quam non provident pariatur, et officia voluptates aliquam beatae minus tenetur amet minima unde fugit ipsum maxime facere a.
+                  </textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h3>Your Avatar</h3>
+          <img src="images/avatar.png" alt="" class="img-fluid mb-2">
+          <div class="d-grid gap-2">
+            <button class="btn btn-secondary" type="button">Edit Image</button>
+            <button class="btn btn-danger" type="button">Delete Image</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -41,9 +158,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
     integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
     crossorigin="anonymous"></script>
+  <!-- CKEditor CDN -->
+  <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+
   <script>
     //Get the current year for the copyright
     $("#year").text(new Date().getFullYear());
+
+    //CKEditor
+    CKEDITOR.replace('editor1');
   </script>
 </body>
 
