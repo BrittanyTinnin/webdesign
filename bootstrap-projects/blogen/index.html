@@ -55,7 +55,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="login.html" class="nav-link">
               <i class="fas fa-user-times"></i> Logout
             </a>
           </li>
@@ -65,7 +65,7 @@
   </nav>
 
   <!-- HEADER -->
-  <header class="navbar navbar-dark bg-primary">
+  <header class="navbar navbar-dark bg-secondary">
     <div class="container">
       <span class="navbar-brand mb-0 fs-1 p-2"><i class="fas fa-cog"></i> Dashboard</span>
     </div>
@@ -76,7 +76,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 mb-2">
-          <a href="" class="btn btn-primary d-block" data-bs-toggle="modal" data-bs-target="#addPostModal">
+          <a href="" class="btn btn-secondary d-block" data-bs-toggle="modal" data-bs-target="#addPostModal">
             <i class="fas fa-plus"></i> Add Post
           </a>
         </div>
@@ -105,7 +105,7 @@
               <h4>Latest Posts</h4>
             </div>
 
-            <table class="table table-striped">
+            <table class="table table-striped table-borderless">
               <thead class="table-dark">
                 <tr>
                   <th scope="col">#</th>
@@ -187,10 +187,10 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card text-center text-white bg-primary mb-3" style="max-width: 15rem">
+          <div class="card text-center text-white bg-secondary mb-3" style="max-width: 15rem">
             <div class="card-body">
               <h3>Posts</h3>
-              <h4 class="display-4"><i class="fas fa-pen"></i> 6</h4>
+              <h4 class="display-4"><i class="fas fa-pencil-alt"></i> 6</h4>
               <a href="posts.html" class="btn btn-outline-light btn-sm">View</a>
             </div>
           </div>
@@ -213,12 +213,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="mt-auto p-3 bg-dark text-white text-center">
-    <div class="container">
-      <p>Copyright &copy; <span id="year"></span> Blogen</p>
-    </div>
-  </footer>
+  
 
   <!-- MODALS -->
 
@@ -226,9 +221,9 @@
   <div class="modal fade" id="addPostModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <div class="modal-header bg-primary text-white">
+        <div class="modal-header bg-secondary text-white">
           <h5 class="modal-title ">Add Post</h5>
-          <button type="button" class="btn-close text-white" data-bs-dismiss="modal"><span>&times;</span></button>
+          <button type="button" class="btn-close text-white" data-bs-dismiss="modal"></button>
         </div>
 
         <div class="modal-body">
@@ -258,14 +253,14 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Save Changes</button>
+          <button type="button" class="btn btn-secondary">Save Changes</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- ADD CATEGORY MODAL -->
-  <div class="modal fade" id="addCategoryModal">
+  <div class="modal fade" id="addCategoryModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-success text-white">
@@ -286,7 +281,7 @@
   </div>
 
   <!-- ADD USER MODAL -->
-  <div class="modal fade" id="addUserModal">
+  <div class="modal fade" id="addUserModal" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-warning text-white">
@@ -317,6 +312,14 @@
       </div>
     </div>
   </div>
+
+
+  <!-- FOOTER -->
+  <footer class="mt-auto p-3 bg-dark text-white text-center">
+    <div class="container">
+      <p>Copyright &copy; <span id="year"></span> Blogen</p>
+    </div>
+  </footer>
 
   <!-- jQuery-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
