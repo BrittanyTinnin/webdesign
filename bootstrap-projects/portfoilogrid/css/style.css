@@ -1,8 +1,15 @@
+
+
 #main-header .port-item {
-    width: 30%;
+  /* width: 30%; */
+  flex: 1;
 }
 
 .bg-black {
-    color: #fff;
-    background: #000;
+  color: #fff;
+  background: #000;
+}
+
+#actions .fa {
+  transform: scale(1.5, 1);
 }
